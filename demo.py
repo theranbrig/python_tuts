@@ -47,4 +47,18 @@ name = "Heisenberg"
 greet_name = greeting + " " + name
 
 guess = 9
-print(f"Your guess of {guess * guess} was incorrect!")
+print(f"Your guess of {3 * guess} was incorrect!")
+
+first = "Theran"
+last = "Brigowatz"
+
+# Two methods of string interpolation
+formatted = "First Name: {}, Last Name: {}".format(first, last)
+formatted = f"First Name: {first}, Last Name: {last}"
+
+num = 12
+print(type(num))
+num = float(num)
+print(type(num))
+print(num)
+
