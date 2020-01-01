@@ -22,5 +22,29 @@ high_score = 200000
 # Define a variable named is_having_fun and set it to a Boolean value
 is_having_fun = True
 
+
+# Escape Characters
+
 new_line = "hi \nthere"
 print(new_line)
+
+# Set the message variable equal to any string containing a new-line escape sequence
+message = "Hello \nWorld"
+
+# Add a string to the mountains variable that when printed results in: /\/\/\
+# You will need to use an escape sequence more than once!
+mountains = "/\\/\\/\\"
+
+# Set the quotation variable to any string that contains an escaped double quotation mark
+quotation = "\"Hello\""
+
+str_one = "your"
+str_one += " face"
+print(str_one)
+
+greeting = "Hello"
+name = "Heisenberg"
+greet_name = greeting + " " + name
+
+guess = 9
+print(f"Your guess of {guess * guess} was incorrect!")
