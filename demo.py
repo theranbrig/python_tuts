@@ -1,5 +1,8 @@
 # Hello World
 
+from random import choice, randint
+from random import randint  # |  \
+from random import randint
 print("Hello World!")
 print("Goodbye World!")
 print("Goodbye World!")
@@ -62,3 +65,87 @@ num = float(num)
 print(type(num))
 print(num)
 
+
+# print("What is your name?")
+# name = input()
+
+# if name == "Theran":
+#     print("You are cool.")
+# else:
+#     print("You are not cool.")
+
+# NO TOUCHING PLEASE---------------
+choice = randint(1, 10)
+# NO TOUCHING PLEASE---------------
+
+# YOUR CODE GOES HERE:
+if choice == 7:
+    print("lucky")
+else:
+    print("unlucky")
+
+# NO TOUCHING ======================================
+num = randint(1, 1000)  # picks random number from 1-1000
+# NO TOUCHING ======================================
+
+# YOUR CODE GOES HERE vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
+if num % 2 == 0:
+    print("even")
+else:
+    print('odd')
+# YOUR CODE GOES HERE ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+# YOUR CODE GOES HERE vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
+# food = choice(['apple', 'grape', 'bacon', 'steak', 'worm', 'dirt'])
+# if food == "apple" or food == "grape":
+#     print("fruit")
+# elif food == "bacon" or food == "steak":
+#     print("meat")
+# else:
+#     print("yuck")
+# YOUR CODE GOES HERE ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+# NO TOUCHING==NO TOUCHING==NO TOUCHING==NO TOUCHING #| \
+x = randint(-100, 100)  # |   \
+while x == 0:  # make sure x isn't zero              #|    \
+    x = randint(-100, 100)  # |     NO TOUCHING!!!!!! (please)
+y = randint(-100, 100)  # |    /
+while y == 0:  # make sure y isn't zero              #|   /
+    y = randint(-100, 100)  # |  /
+# NO TOUCHING==NO TOUCHING==NO TOUCHING==NO TOUCHING #| /
+
+
+# Don't change the print statements so the tests can pass!
+# YOUR CODE GOES HERE vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
+
+if x > 0 and y > 0:
+    print("both positive")
+elif x < 0 and y < 0:
+    print("both negative")
+elif x > 0 and y < 0:
+    print("x is positive and y is negative")
+else:
+    print("y is positive and x is negative")
+
+    # NO TOUCHING ======================================
+
+
+# # randomly assigns values to these four variables
+# actually_sick = choice([True, False])
+# kinda_sick = choice([True, False])
+# hate_your_job = choice([True, False])
+# sick_days = randint(0, 10)
+
+# # NO TOUCHING ======================================
+
+
+# calling_in_sick = None  # set this to True or False with Boolean Logic and Conditionals!
+
+# # YOUR CODE GOES HERE vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
+
+# if (actually_sick and sick_days > 0) or (kinda_sick and hate_your_job and sick_days > 0):
+#     calling_in_sick = True
+# else:
+#     calling_in_sick = False
+
+# # YOUR CODE GOES HERE ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
