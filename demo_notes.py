@@ -149,3 +149,38 @@ else:
 #     calling_in_sick = False
 
 # # YOUR CODE GOES HERE ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+for x in range(0, 100):
+    print(x)
+    print(x * x)
+
+for letter in "coffee":
+    print(letter)
+
+for num in range(0, 100, 5):
+    print(num)
+
+# Add up all odd numbers between 10 and 20
+# Store the result in x:
+x = 0
+
+for num in range(10, 20):
+    if num % 2 != 0:
+        x += num
+# YOUR CODE GOES HERE:
+
+
+for num in range(20):
+    if num == 7 or num == 4 or num == 13:
+        state = "Unlucky"
+    elif num % 2 == 0:
+        state = "Even"
+    else:
+        state = "Odd"
+    print(f"{num} is {state}")
+
+faces = 1
+
+while faces < 11:
+    print("\U0001f600" * faces)
+    faces += 1
