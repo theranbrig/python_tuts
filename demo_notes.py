@@ -184,3 +184,13 @@ faces = 1
 while faces < 11:
     print("\U0001f600" * faces)
     faces += 1
+
+print("Hey, How how's it going?")
+print('Pretty good, you?')
+phrase = input()
+
+while(phrase != "stop copying me"):
+    print(phrase)
+    phrase = input()
+
+print("UGH FINE. YOU WIN.")
