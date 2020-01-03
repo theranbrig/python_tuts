@@ -185,12 +185,110 @@ while faces < 11:
     print("\U0001f600" * faces)
     faces += 1
 
-print("Hey, How how's it going?")
-print('Pretty good, you?')
-phrase = input()
+# print("Hey, How how's it going?")
+# print('Pretty good, you?')
+# phrase = input()
 
-while(phrase != "stop copying me"):
-    print(phrase)
-    phrase = input()
+# while(phrase != "stop copying me"):
+#     print(phrase)
+#     phrase = input()
 
-print("UGH FINE. YOU WIN.")
+# print("UGH FINE. YOU WIN.")
+
+demo_list = ['a', 1.45, 5, True, 'hello']
+
+print(len(demo_list))
+r = range(1, 10)
+list(r)
+print(r[3])
+print(r[-1])
+
+# DON'T TOUCH THIS PLEASE!
+people = ["Hanna", "Louisa", "Claudia", "Angela", "Geoffrey", "aparna"]
+# DON'T TOUCH THIS PLEASE!
+
+# Change "Hanna" to "Hannah"
+people[0] = "Hannah"
+
+# Change "Geoffrey" to "Jeffrey"
+people[-2] = "Jeffrey"
+
+# Change "aparna" to "Aparna" (capitalize it)
+people[5] = "Aparna"
+
+sounds = ["super", "cali", "fragil", "istic", "expi", "ali", "docious"]
+
+# Define your code below:
+result = ""
+for sound in sounds:
+    result += sound.upper()
+
+
+sounds.insert(2, 'super')  # Insert at index
+sounds.insert(len(sounds), 'docious')  # Insert at end
+sounds.pop()  # Removes last and returns
+# sounds.pop(1)  # Removes at index
+sounds.index("cali")  # Returns 1 - second argument tells starting index
+sounds.count('super')  # Counts number of times it exists
+sounds.reverse()  # Updates.  Not immutable practice
+sounds.sort()  # Ascending
+# " ".sounds.join()  # Concats into string
+
+# Create a list called instructors
+instructors = []
+
+# Add the following strings to the instructors list
+# "Colt"
+# "Blue"
+# "Lisa"
+instructors.extend(["Colt", "Blue", "Lisa"])
+
+# Remove the last value in the list
+instructors.pop()
+
+# Remove the first value in the list
+instructors.pop(0)
+
+# Add the string "Done" to the beginning of the list
+instructors.insert(0, "Done")
+
+# Run the tests to make sure you've done this correctly!
+# list[start:end:step] :goes to the end - Makes a copy - End is exclusive and does not include the last index.
+
+instructors[::-1]  # Reverses List
+
+# List Comprehension
+
+nums = [1, 2, 3]
+new_nums = [x*10 for x in nums]
+print(new_nums)
+
+evens = [x for x in nums if x % 2 == 0]
+evens = [x for x in nums if x % 2 != 0]
+print(evens)
+
+names = ["Elie", "Tim", "Matt"]
+answer = [name[0] for name in names]
+
+nums = [1, 2, 3, 4, 5, 6]
+answer2 = [num for num in nums if num % 2 == 0]
+
+first = [1, 2, 3, 4]
+second = [3, 4, 5, 6]
+answer = [x for x in first if x in second]
+
+names = ["Elie", "Tim", "Matt"]
+answer2 = [name.lower()[::-1] for name in names]
+
+answer = [num for num in list(range(1, 100)) if num % 12 == 0]
+
+# No Vowels
+word = "amazing"
+answer = [char for char in word if char not in "aeiou"]
+
+artist = {
+    "first": "Neil",
+    "last": "Young",
+}
+
+full_name = artist['first'] + " " + artist['last']
