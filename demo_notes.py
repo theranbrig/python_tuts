@@ -492,3 +492,126 @@ def number_compare(a, b):
     elif a < b:
         return "Second is greater"
     return "Numbers are equal"
+
+# define single_letter_count below:
+
+
+def single_letter_count(string, letter):
+    return string.lower().count(letter)
+
+
+'''
+multiple_letter_count("awesome") # {'a': 1, 'e': 2, 'm': 1, 'o': 1, 's': 1, 'w': 1}
+'''
+
+# flesh out multiple_letter count:
+
+
+def multiple_letter_count(string):
+    return {letter: string.count(letter) for letter in string}
+
+
+'''
+list_manipulation([1,2,3], "remove", "end") # 3
+list_manipulation([1,2,3], "remove", "beginning") #  1
+list_manipulation([1,2,3], "add", "beginning", 20) #  [20,1,2,3]
+list_manipulation([1,2,3], "add", "end", 30) #  [1,2,3,30]
+'''
+
+
+def list_manipulation(arr, command, location, value=None):
+    if (command == 'remove' and location == 'end'):
+        return arr.pop()
+    elif (command == 'remove' and location == 'beginning'):
+        return arr.pop(0)
+    elif (command == 'add' and location == 'end'):
+        arr.append(value)
+        return arr
+    else:
+        arr.insert(0, value)
+        return arr
+
+
+'''
+is_palindrome('testing') # False
+is_palindrome('tacocat') # True
+is_palindrome('hannah') # True
+is_palindrome('robert') # False
+is_palindrome('amanaplanacanalpanama') # True
+'''
+
+
+def is_palindrome(phrase):
+    return phrase == phrase[::-1]
+
+
+'''
+frequency([1,2,3,4,4,4], 4) # 3
+frequency([True, False, True, True], False) # 1
+'''
+
+
+def frequency(arr, value):
+    return arr.count(value)
+
+
+'''
+multiply_even_numbers([2,3,4,5,6]) # 48
+'''
+
+
+def multiply_even_numbers(arr):
+    total = 1
+    for num in arr:
+        if num % 2 == 0:
+            total = total * num
+    return total
+
+
+'''
+capitalize("tim") # "Tim"
+capitalize("matt") # "Matt"
+'''
+
+
+def capitalize(string):
+    return string[0:1].upper() + string[1::]
+
+
+'''
+compact([0,1,2,"",[], False, {}, None, "All done"]) # [1,2, "All done"]
+'''
+
+
+def compact(arr):
+    return [item for item in arr if item]
+
+
+# flesh out intersection pleaseeeee
+def intersection(arr1, arr2):
+    return [val for val in arr1 if val in arr2]
+
+
+'''
+def isEven(num):
+    return num % 2 == 0
+
+partition([1,2,3,4], isEven) # [[2,4],[1,3]]
+'''
+
+
+def partition(arr, callback):
+    true_list = []
+    false_list = []
+    for item in arr:
+        if callback(item):
+            true_list.append(item)
+        else:
+            false_list.append(item)
+    return [true_list, false_list]
+
+
+def contains_purple(*args):
+    if "purple" in args:
+        return True
+    return False
