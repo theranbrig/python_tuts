@@ -672,3 +672,54 @@ def cube(a): return a**3
 
 
 lambda a: a**3
+
+
+def decrement_list(list_var):
+    return list(map(lambda x: x - 1, list_var))
+
+
+def remove_negatives(nums):
+    return list(filter(lambda x: x >= 0, nums))
+
+# Implement your is_all_strings function below:
+
+
+def is_all_strings(var_list):
+    return all(type(x) == str for x in var_list)
+
+# Define extremes below:
+
+
+def extremes(list_val):
+    return (min(list_val), max(list_val))
+
+
+def max_magnitude(list_var):
+    return max(list(abs(x) for x in list_var))
+
+
+def max_magnitude(nums):
+    return max(abs(num) for num in nums)
+
+
+'''
+sum_even_values(1,2,3,4,5,6) # 12
+sum_even_values(4,2,1,10) # 16
+sum_even_values(1) # 0
+'''
+
+# define sum_even_values
+
+
+def sum_even_values(*args):
+    return sum(arg for arg in args if arg % 2 == 0)
+
+
+'''
+sum_floats(1.5, 2.4, 'awesome', [], 1) # 3.9
+sum_floats(1,2,3,4,5) # 0
+'''
+
+
+def sum_floats(*args):
+    return sum(var for var in args if type(var) == float)
