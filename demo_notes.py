@@ -757,3 +757,39 @@ def divide(a, b):
     except ZeroDivisionError:
         return "Please do not divide by zero"
     return total
+
+
+'''
+reverse_string('awesome') # 'emosewa'
+reverse_string('Colt') # 'tloC'
+reverse_string('Elie') # 'eilE'
+'''
+
+# add whatever parameters you deem necessary - good luck!
+
+
+def reverse_string(str):
+    # implement your function here
+    return str[::-1]
+
+
+'''
+list_check([[],[1],[2,3], (1,2)]) # False
+list_check([1, True, [],[1],[2,3]]) # False
+list_check([[],[1],[2,3]]) # True
+'''
+
+
+def list_check(l_var):
+    return all(type(l) == list for l in l_var)
+
+
+'''
+remove_every_other([1,2,3,4,5]) # [1,3,5]
+remove_every_other([5,1,2,4,1]) # [5,2,1]
+remove_every_other([1]) # [1]
+'''
+
+
+def remove_every_other(lst):
+    return [val for i, val in enumerate(lst) if i % 2 == 0]
