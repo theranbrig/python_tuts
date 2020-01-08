@@ -501,7 +501,8 @@ def single_letter_count(string, letter):
 
 
 '''
-multiple_letter_count("awesome") # {'a': 1, 'e': 2, 'm': 1, 'o': 1, 's': 1, 'w': 1}
+multiple_letter_count(
+    "awesome") # {'a': 1, 'e': 2, 'm': 1, 'o': 1, 's': 1, 'w': 1}
 '''
 
 # flesh out multiple_letter count:
@@ -644,8 +645,10 @@ result1 = count_sevens(1, 4, 7)
 result2 = count_sevens(*nums)
 
 '''
-calculate(make_float=False, operation='add', message='You just added', first=2, second=4) # "You just added 6"
-calculate(make_float=True, operation='divide', first=3.5, second=5) # "The result is 0.7"
+calculate(make_float=False, operation='add', message='You just added',
+          first=2, second=4) # "You just added 6"
+calculate(make_float=True, operation='divide',
+          first=3.5, second=5) # "The result is 0.7"
 '''
 
 
@@ -723,3 +726,34 @@ sum_floats(1,2,3,4,5) # 0
 
 def sum_floats(*args):
     return sum(var for var in args if type(var) == float)
+
+
+def triple_and_filter(lst):
+    return list(filter(lambda x: x % 4 == 0, map(lambda x: x*3, lst)))
+
+
+'''
+names = [{'first': 'Elie', 'last': 'Schoppik'}, {'first': 'Colt', 'last': 'Steele'}]
+extract_full_name(names) # ['Elie Schoppik', 'Colt Steele']
+'''
+
+
+def extract_full_name(l):
+    return list(map(lambda val: "{} {}".format(val['first'], val['last']), l))
+# Write a function called divide, which accepts two parameters (you can call them num1 and num2). The function should return the result of num1 divided by num2. If you do not pass the correct amount of arguments to the function, it should return the string "Please provide two integers or floats". If you pass as the second argument a 0, Python will raise a ZeroDivisionError, so if this function is invoked with a 0 as the value of num2, return the string "Please do not divide by zero"
+
+    # Examples
+
+    # divide(4,2)  2
+    # divide([],"1")  "Please provide two integers or floats"
+    # divide(1,0)  "Please do not divide by zero"
+
+
+def divide(a, b):
+    try:
+        total = a / b
+    except TypeError:
+        return "Please provide two integers or floats"
+    except ZeroDivisionError:
+        return "Please do not divide by zero"
+    return total
