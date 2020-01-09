@@ -3,7 +3,7 @@ from pyfiglet import figlet_format as format
 
 valid_colors = ("red", "green", "yellow", "blue", "magenta", "cyan", "white")
 
-
+  
 def print_art(msg, color):
     if color not in valid_colors:
         color = "cyan"
