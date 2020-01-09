@@ -1,5 +1,7 @@
 # Hello World
 
+import keyword
+import math
 from random import random
 from random import choice  # DON'T CHANGE!
 from random import choice, randint
@@ -793,3 +795,16 @@ remove_every_other([1]) # [1]
 
 def remove_every_other(lst):
     return [val for i, val in enumerate(lst) if i % 2 == 0]
+
+# Import the math module:
+
+
+answer = math.sqrt(answer)
+
+# Use math.sqrt  to find the square root of 15129 and save it to variable called answer:
+
+
+def contains_keyword(*args):
+    if any(keyword.iskeyword(arg) for arg in args):
+        return True
+    return False
