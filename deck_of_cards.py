@@ -19,20 +19,22 @@ class Deck:
         self.cards = new_deck
 
     def __repr__(self):
-        cards_remaining = len(self.cards)
-        return f"Deck of {cards_remaining} cards"
+        return f"Deck of {self.count()} cards"
 
     def _deal(self, num):
         count = 0
-        if num < len(self.cards):
-            num = len(self.cards)
-        if len(self.cards) == 0:
+        if num < self.count():
+            num = self.count()
+        if self.count() == 0:
             return ValueError("All cards have been dealt")
         while count < num:
             self.cards.pop()
 
+    def count(self):
+        return len(self.cards)
+
     def shuffle(self):
-        if len(self.cards) < 52:
+        if self.count() < 52:
             return ValueError("Only full decks can be shuffled")
         else:
             return random.shuffle(self.cards)
@@ -55,3 +57,4 @@ print(my_deck)
 print(my_deck.shuffle())
 print(my_deck.deal_card())
 print(my_deck.deal_hand(5))
+print(my_deck)
