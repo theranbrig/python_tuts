@@ -808,3 +808,31 @@ def contains_keyword(*args):
     if any(keyword.iskeyword(arg) for arg in args):
         return True
     return False
+
+
+'''
+sum_pairs([4,2,10,5,1], 6) # [4,2]
+sum_pairs([11,20,4,2,1,5], 100) # []
+'''
+
+
+def sum_pairs(ints, s):
+    already_visited = set()
+    for i in ints:
+        difference = s - i
+        if difference in already_visited:
+            return [difference, i]
+        already_visited.add(i)
+    return []
+
+
+'''
+vowel_count('awesome') # {'a': 1, 'e': 2, 'o': 1}
+vowel_count('Elie') # {'e': 2, 'i': 1}
+vowel_count('Colt') # {'o': 1}
+'''
+
+
+def vowel_count(string):
+    lower_s = string.lower()
+    return {letter: lower_s.count(letter) for letter in lower_s if letter in "aeiou"}
